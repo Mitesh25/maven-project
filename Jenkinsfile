@@ -3,7 +3,7 @@ pipeline {
 		stages {
 			stage ('SCM Checkout') {
 				steps {
-					git 'https://github.com/Mitesh25/jenkins_pipeline_hello.git'
+					git 'https://github.com/Mitesh25/mitesh-maven-project.git'
 				}
 			}
 			stage ('Validate Source Code') {
