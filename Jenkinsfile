@@ -16,7 +16,7 @@ pipeline {
 			stage ('Compile Source Code') {
 				steps {
 					withMaven (maven: 'My_Maven'){
-						sh 'mvn compile'
+						sh 'mvn clean compile'
 					}
 				}
 			}
