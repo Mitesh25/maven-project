@@ -33,7 +33,7 @@ pipeline {
 				}
 				steps {
 					withSonarQubeEnv('SonarPipeline3') {
-					sh "${scannerHome}/bin/sonar-scanner"
+					sh 'mvn test sonar:sonar'
 					}
 					timeout(time: 10, unit: 'MINUTES') {
 					waitForQualityGate abortPipeline: true
